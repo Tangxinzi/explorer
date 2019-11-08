@@ -1,0 +1,26 @@
+.jyHash {
+  padding-left: 10px;
+}
+
+.jyHashFFF {
+  background: #fff;
+  padding-bottom: 16px;
+}
+
+.seeInfo {
+  display: block;
+  margin: auto;
+  margin-top: 16px;
+  width: 130px;
+  height: 36px;
+  background: #00b791;
+  border-style: none;
+  font-size: 13px;
+  border-radius: 16px;
+  color: #FFF;
+}
+
+.seeInfo:hover {
+  background: #038e71;
+  color: #FFF;
+}

@@ -1,0 +1,18 @@
+.situationTitle {
+  height: 54px;
+  line-height: 54px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.qkTxt .ant-row:nth-child(odd) {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.qkTxt .ant-row:nth-child(even) {
+  font-size: 16px;
+  color: #6874b7;
+  margin-bottom: 30px;
+}

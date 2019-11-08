@@ -1,0 +1,56 @@
+.token {
+  /* padding: 0 130px; */
+}
+
+.explain {
+  height: 68px;
+  line-height: 80px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.token .content {
+  background: #fff;
+  padding: 28px;
+}
+
+.ant-descriptions-view {
+  padding: 28px
+}
+
+.token .content .title {
+  margin-bottom: 30px;
+}
+
+.token .content .title .btntitleleft {
+  float: left;
+  line-height: 36px;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.token .content .title .btntitleright {
+  float: left;
+  line-height: 36px;
+  font-size: 20px;
+}
+
+
+
+.token .content .title .btntitle {
+  padding: 0 30px;
+  font-weight: 700;
+  color: #fff;
+  background: #90a7ff;
+  border-radius: 18px;
+}
+
+.token .content .title .btntitle>a {
+  color: #fff;
+}
+
+@media (max-width:575px) {
+  .token .content {
+    padding: 10px 0;
+  }
+}

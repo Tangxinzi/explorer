@@ -1,0 +1,27 @@
+.depoly {
+  padding: 0 20px;
+  background: #fff;
+}
+
+.depoly:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.depolytitle {
+  height: 64px;
+  line-height: 64px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.upload {
+  float: right;
+  height: 40px;
+  background: #90a7ff;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 10px 0;
+}

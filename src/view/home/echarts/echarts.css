@@ -1,0 +1,13 @@
+.echartsTitle {
+  height: 54px;
+  line-height: 54px;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 25px;
+}
+
+.echarts {
+  width: 100%;
+  position: relative;
+  left: -30px;
+}

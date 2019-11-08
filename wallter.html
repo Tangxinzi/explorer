@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>私钥:</th>
+      <td><input type="text" placeholder="(private key)" id="select-privatekey" /></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+        <div id="select-submit-privatekey" class="submit">加载私钥</div>
+      </td>
+    </tr>
+  </table>
+  <!-- 会导出一个全局的变量: ethers -->
+  <script src='https://cdn.bootcss.com/jquery/3.4.0/jquery.js'></script>
+
+  <!-- cdn方式 -->
+  <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js" charset="utf-8" type="text/javascript"></script>
+
+
+  <script src="./CryptoJS.js" charset="utf-8" type="text/javascript"></script>
+  <script>
+    const {
+      Wallet
+    } = ethers
+
+    // var privateKey = ethers.utils.randomBytes(32);
+    // var wallet = new ethers.Wallet(privateKey);
+    // console.log("账号地址: " + wallet.address);
+    console.log(CryptoJS)
+
+
+    var key = "sanji@123!abcd9876poi..!"; //秘钥
+    var iv = ""; //向量
+
+
+
+
+    // 加密
+    function encryptByDES(message) {
+      var keyHex = CryptoJS.enc.Utf8.parse(key);
+      var encrypted = CryptoJS.TripleDES.encrypt(message, keyHex, {
+        iv: CryptoJS.enc.Utf8.parse(iv),
+        mode: CryptoJS.mode.CBC,
+        padding: CryptoJS.pad.Pkcs7
+      });
+      return encrypted.toString();
+    }
+    var a = encryptByDES('天天天dsafui"{sadfds}fffsdads:gsfsa"fsdafsda')
+    console.log(111, a)
+
+
+    // 解密
+    function decryptByDES(ciphertext) {
+      var keyHex = CryptoJS.enc.Utf8.parse(key);
+
+      var decrypted = CryptoJS.TripleDES.decrypt({
+        ciphertext: CryptoJS.enc.Base64.parse(ciphertext)
+      }, keyHex, {
+        iv: CryptoJS.enc.Utf8.parse(iv),
+        mode: CryptoJS.mode.CBC,
+        padding: CryptoJS.pad.Pkcs7
+      });
+
+      return decrypted.toString(CryptoJS.enc.Utf8);
+    }
+
+
+    console.log(decryptByDES(a))
+
+
+
+
+
+    // // 使用JQuery获取两个UI标签
+    // var inputPrivatekey = $('#select-privatekey');
+    // var submit = $('#select-submit-privatekey');
+
+
+    // // 生成一个默认的私钥
+    // let randomNumber = ethers.utils.bigNumberify(ethers.utils.randomBytes(32));
+    // inputPrivatekey.val(randomNumber._hex);
+
+
+    // // 点击“加载私钥”时， 创建对应的钱包
+    // submit.click(function () {
+    //   var privateKey = inputPrivatekey.val();
+    //   if (privateKey.substring(0, 2) !== '0x') {
+    //     privateKey = '0x' + privateKey;
+    //   }
+    //   var wallet = new ethers.Wallet(privateKey)
+    //   console.log("账号地址: " + wallet.address);
+    //   console.log(wallet)
+
+
+    //   // wallet 是上一篇文章中生成的钱包对象
+    //   let keystory = sessionStorage.getItem('keystory')
+    //   if (!keystory) {
+    //     wallet.encrypt("123456").then(function (json) {
+    //       console.log(1111, json)
+    //       sessionStorage.setItem('keystory', json)
+    //     });
+    //   } else {
+    //     ethers.Wallet.fromEncryptedJson(keystory, '123456')
+    //       .then(function (wallet) {
+    //         console.log(wallet)
+    //       })
+    //   }
+    // })
+  </script>
+</body>
+
+</html>

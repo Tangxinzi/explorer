@@ -1,0 +1,40 @@
+.footer {
+  height: 200px;
+  background: #00b791;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.footer .section {
+  max-width: 1160px;
+  margin: auto;
+  height: 100%;
+}
+
+.footer .section .text {
+  float: right;
+  /* width: 400px; */
+  color: #fff;
+  margin-top: 40px;
+}
+
+.footer .section .img {
+  float: left;
+  /* width: 400px; */
+  color: #fff;
+  margin-top: 40px;
+}
+
+.footer .section .img img {
+  width: 130px;
+}
+
+@media (max-width:575px) {
+  .footer .section .img img {
+    width: 50px;
+  }
+
+  .footer .section .text {
+    font-size: 12px;
+  }
+}
