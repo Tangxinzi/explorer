@@ -47,7 +47,7 @@ export default class Home extends Component {
         // 请求数据
         // console.log(obj)
         this.fetch.request({
-            url: 'http://47.94.150.170:8080/api/v1/token/userTokenRecord',
+            url: 'http://47.94.150.170:8080/v1/token/userTokenRecord',
             method: 'post',
             headers: {
                 'Content-type': 'application/json'

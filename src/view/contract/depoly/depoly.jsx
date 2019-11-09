@@ -33,7 +33,7 @@ class Home extends Component {
                 })
                 // 请求数据
                 this.fetch.request({
-                    url: 'http://47.94.150.170:8080/api/v1/contract/FT_deployContract',
+                    url: 'http://47.94.150.170:8080/v1/contract/FT_deployContract',
                     method: 'post',
                     headers: {
                         'Content-type': 'application/json',

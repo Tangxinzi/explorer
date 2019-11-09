@@ -187,14 +187,21 @@
 
   .searchMedia {
     position: absolute;
-    width: 75vw;
+    width: 100%;
     top: -50px;
     left: 0;
     z-index: 999;
   }
 
+  .antdrow,
+  .searchMedia {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .header .ant-input-affix-wrapper {
     border-radius: 0;
+    width: 100%;
   }
 
   .header .ant-dropdown-trigger {

@@ -61,8 +61,8 @@ export default class Home extends Component {
             data: {
                 channelId: channelId,
                 page: "0",
-                pageSize: "4",
-                txNumber: '4'
+                pageSize: "10",
+                txNumber: '10'
             }
         }).then(res => {
             if (res.data.data.Code !== 200) {

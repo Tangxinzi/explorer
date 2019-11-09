@@ -36,7 +36,7 @@ export default class Home extends Component {
     }
     getTokenData(account) {
         this.fetch.request({
-            url: 'http://47.94.150.170:8080/api/v1/token/showAccount',
+            url: 'http://47.94.150.170:8080/v1/token/showAccount',
             method: 'post',
             headers: {
                 'Content-type': 'application/json'
@@ -68,7 +68,7 @@ export default class Home extends Component {
         //     hash
         // })
         this.fetch.request({
-            url: 'http://47.94.150.170:8080/api/v1/explorer/search',
+            url: 'http://47.94.150.170:8080/v1/explorer/search',
             method: 'post',
             headers: {
                 'Content-type': 'application/json'

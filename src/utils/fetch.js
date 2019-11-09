@@ -13,7 +13,7 @@ export const httpJa = (url, method, data) => axios.request({
 
 
 // -----------------------------------华丽的分割线---------------------------------
-const goUrl = 'http://47.94.150.170:8080/api'
+const goUrl = 'http://47.94.150.170:8080'
 
 export const httpGo = (url, method, data) => axios.request({
     url: goUrl + url,

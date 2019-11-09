@@ -1,8 +1,9 @@
 .footer {
-  height: 200px;
+  padding-bottom: 20px !important;
   background: #00b791;
   margin-top: 20px;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .footer .section {
@@ -29,9 +30,13 @@
   width: 130px;
 }
 
+.ant-layout-footer {
+  padding: 0;
+}
+
 @media (max-width:575px) {
   .footer .section .img img {
-    width: 50px;
+    width: 105px;
   }
 
   .footer .section .text {

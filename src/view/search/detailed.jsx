@@ -21,7 +21,7 @@ export default class Home extends Component {
     getData(hash) {
         // 请求数据
         this.fetch.request({
-            url: 'http://47.94.150.170:8080/api/v1/explorer/search',
+            url: 'http://47.94.150.170:8080/v1/explorer/search',
             method: 'post',
             headers: {
                 'Content-type': 'application/json'
