@@ -12,6 +12,7 @@ import {
 } from 'antd';
 // 引入路由组件
 import { Link } from 'react-router-dom';
+import '../style/other.css';
 
 import {
     register,
@@ -110,10 +111,13 @@ class LoginFrom extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
+          <>
+            <img src={[require('../assets/img/logo.jpg')]} alt="" className="user-logo" />
+            <div className="user-title">绿钻信用</div>
             <Card title="注册"
                 style={{
                     width: 500,
-                    margin: '200px auto',
+                    margin: '0 auto',
                 }} hoverable>
                 <Form onSubmit={this.handleSubmit} className="login-form">
                     <Form.Item>
@@ -181,6 +185,7 @@ class LoginFrom extends Component {
                     </Form.Item>
                 </Form>
             </Card>
+          </>
         )
     }
 }
